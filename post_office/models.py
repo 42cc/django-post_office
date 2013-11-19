@@ -142,7 +142,7 @@ class Log(models.Model):
         ordering = ('-date',)
 
     def __unicode__(self):
-        return str(self.date)
+        return unicode(self.date)
 
 
 class EmailTemplate(models.Model):
@@ -163,7 +163,7 @@ class EmailTemplate(models.Model):
         ordering = ('name',)
 
     def __unicode__(self):
-        return str(self.name)
+        return unicode(self.name)
 
     def save(self, *args, **kwargs):
         template = super(EmailTemplate, self).save(*args, **kwargs)
